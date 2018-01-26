@@ -235,7 +235,7 @@ header input[type='text']::placeholder {
     padding-left: 17.5px;
     padding-right: 0px;
     float: none;
-    /* margin-bottom: 20px; */
+    margin-bottom: 10px;
 }
 
 .share_card .button {
@@ -254,7 +254,7 @@ header input[type='text']::placeholder {
 }
 
 .share_card img {
-    margin-top: -2px;
+    margin-top: -8px;
 }
 
 .share_card .text {
@@ -275,3 +275,7 @@ header input[type='text']::placeholder {
 
 
 /* ===== TEMPORARY / TESTING ===== */
+
+.posts_heading {
+    padding-left: 25px;
+}
