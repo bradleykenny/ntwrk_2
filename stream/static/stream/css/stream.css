@@ -219,6 +219,11 @@ header input[type='text']::placeholder {
     margin: 0px 10px 10px 0px;
 }
 
+.card .link:hover {
+    transition: 0.75s ease;
+    color: #456990;
+}
+
 /* ===== SHARE CARD ===== */
 
 .share_card {
