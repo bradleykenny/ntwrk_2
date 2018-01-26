@@ -269,13 +269,3 @@ hr {
 
 
 /* ===== TEMPORARY / TESTING ===== */
-
-.logo_cus1 {
-    float: none;
-    color: black;
-    margin: 0px;
-}
-
-.logo_cus1:hover {
-    color: black;
-}
