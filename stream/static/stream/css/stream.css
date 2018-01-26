@@ -223,17 +223,17 @@ header input[type='text']::placeholder {
 
 .share_card {
     padding: 0px 0px 5px 25px;
-    float: left;
+    float: none;
     /* margin-bottom: 20px; */
 }
 
 .share_card .button {
     text-align: center;
-    display: inline;
-    width: 180px;
-    float: left;
-    margin-right: 25px;
+    display: inline-block;
+    width: 15%;
+    /* float: left; */
     margin-top: 5px;
+    margin-right: 2.5%;
 }
 
 .share_card h1 {
