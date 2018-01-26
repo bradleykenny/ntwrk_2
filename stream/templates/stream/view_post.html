@@ -2,22 +2,6 @@
 {% load static %}
 
 {% block stream %}
-    {% if user.is_authenticated %}
-    <div class="card share_card">
-        <a href="{% url 'home' %}">
-            <img src="{% static 'stream/img/dp/admin.jpg' %}" class="dp">
-        </a>
-        <h1>Want to share something?</h1><br>
-        <a href="{% url 'new_post' %}" class="button text">Text</a>
-        <a href="{% url 'home' %}" class="button image">Image</a>
-        <a href="{% url 'home' %}" class="button video">Video</a>
-        <a href="{% url 'home' %}" class="button audio">Audio</a>
-    </div>
-    {% endif %}
-
-
-    <h1 class="posts_heading">Posts</h1>
-    {% for post in posts %}
     <div class="card">
         <a href="{% url 'home' %}">
             <img src="{% static 'stream/img/dp/admin.jpg' %}" class="dp">
@@ -29,11 +13,10 @@
         <p>{{ post.content }}</p>
         <a href="{% url 'home' %}" class="link">Comment</a>
         <a href="{% url 'home' %}" class="link">Share</a>
-        <a href="{% url 'view_post' post.id %}" class="link">View</a>
+        <a href="{% url 'home' %}" class="link">View</a>
         {% if post.posted_by == request.user %}
         <a href="{% url 'home' %}" class="link">Edit</a>
         <a href="{% url 'delete_post' post.id %}" class="link">Delete</a>
         {% endif %}
     </div>
-    {% endfor %}
 {% endblock %}
