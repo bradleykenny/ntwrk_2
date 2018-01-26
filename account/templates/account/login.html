@@ -1,0 +1,21 @@
+{% extends 'base_welcome.html' %}
+{% load static %}
+
+{% block login_reg %}
+<div class="card" id="login_form">
+	<h1>LOG IN</h1>
+	<form method="post">
+		{% csrf_token %}
+		{% for field in form %}
+		<p>
+			{{ field }}
+			{% for error in field.errors %}
+				<p style="color: red">{{ error }}</p>
+			{% endfor %}
+		</p>
+		{% endfor %}
+		<button type="submit">Welcome Back</button>
+	</form>
+	<a href="{% url 'register' %}" class="under_signup_link">Don't have a profile yet?</a>
+</div>
+{% endblock %}

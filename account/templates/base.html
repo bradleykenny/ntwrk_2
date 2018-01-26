@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>ntwrk: {% block title %}{% endblock %}</title>
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+		<!-- PUT NORMALISE HERE -->
+		<link rel="stylesheet" type="text/css" href="{% static 'account/css/base.css' %}">
+		{% block stylesheet %}
+		{% endblock %}
+	</head>
+	<body>
+		<header>
+			<a href="{% url 'home' %}" class="logo">ntwrk</a>
+			<input type="text" placeholder="Search..."/>
+			<ul>
+				{% if user.is_authenticated %}
+				<a href="{% url 'home' %}">Home</a>
+				<a href="{% url 'home' %}"><b>{{ user.username }}</b>: {{ user.first_name }} {{ user.last_name }}</a>
+				<a href="{% url 'home' %}">…</a>
+				<a href="{% url 'logout' %}">Log Out</a>
+				{% else %}
+				<a href="{% url 'home' %}">Home</a>
+				<a href="{% url 'home' %}"><b>Username</b>: Name</a>
+				<a href="{% url 'login' %}">Log In</a>
+				<a href="{% url 'register' %}">Register</a>
+				{% endif %}
+			</ul>
+		</header>
+		<main>
+			{% block content %}
+			{% endblock %}
+		</main>
+	</body>
+</html>

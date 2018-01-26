@@ -1,0 +1,157 @@
+/*
+
+==========================================================
+
+LOGIN_REGISTER.CSS
+VERSION: 0.1
+
+----------------------------------------------------------
+
+STYLESHEET USED TO DESIGN THE LOGIN AND REGISTER PAGES
+
+PAGES: LOGIN, REGISTER
+
+==========================================================
+
+*/
+
+/* ===== GENERAL ===== */
+
+body {
+	background: url('../img/geometry.jpg') no-repeat center center fixed;
+	background-size: cover;
+}
+
+.outer {
+	display: table;
+	position: absolute;
+
+	height: 99%;
+	width: 99%;
+}
+
+.middle {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.inner {
+	width: 280px;
+
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* ===== CARDS ===== */
+
+.card {
+	/* choose a width */
+	width: 251px;
+}
+
+.card h1 {
+	text-align: center;
+	font-family: sans-serif;
+}
+
+#login_form {
+	float: right;
+	margin-right: -275px;
+}
+
+#info_box {
+	width: 440px;
+	float: left;
+	margin-left: -260px;
+	margin-bottom: 50px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+#info_box h2 {
+	font-size: 36px;
+
+	margin-top: 20px;
+	margin-bottom: -10px;
+}
+
+/* ===== SPECIAL TEXT ===== */
+
+.under_signup_link {
+	width: 100%;
+
+	display: inline-block;
+	text-align: center;
+
+	margin-top: 0px;
+
+	font-size: 14px;
+	color: #545454;
+
+	cursor: pointer;
+}
+
+.under_signup_link:hover {
+	text-decoration: underline;
+}
+
+.welcome_text {
+	width: 200%;
+
+	margin-top: 80px;
+	margin-left: -120px;
+
+	font-size: 84px;
+	font-family: "Signpainter", "Noteworthy";
+	color: #ffffff;
+	text-shadow: 0 0 25px #000000;
+
+	user-select: none;
+}
+
+#logo_header {
+	font-size: 72px;
+	color: #ffffff;
+}
+
+.cursive {
+	/* try a different font */
+	font-family: "Signpainter", "Noteworthy";
+	font-size: 44px;
+}
+
+
+/* ===== LOG OUT ===== */
+
+.logout {
+	color: #ffffff;
+	font-size: 72px;
+	text-shadow: 0 0 25px #000000;
+
+	width: 1000px;
+	margin-left: -150px;
+}
+
+.bottom_hanging {
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	padding: 10px 0;
+
+	background-color: #ffffff;
+
+}
+
+.under_logout_link {
+	color: #ffffff;
+	position: fixed;
+	bottom: 20px;
+	margin-left: 100px;
+	font-size: 36px;
+}
+
+.bottom_hanging a {
+	width: 100%;
+	text-align: center;
+}

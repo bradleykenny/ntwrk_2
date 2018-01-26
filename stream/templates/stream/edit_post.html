@@ -1,0 +1,18 @@
+{% extends 'base_stream.html' %}
+{% load static %}
+
+{% block stream %}
+    {% if user.is_authenticated %}
+    <h1>Welcome to my site, {{ user.first_name }}.</h1>
+    {% else %}
+    <h1>Welcome to my site. Have a good day.</h1>
+    {% endif %}
+
+    <div class="card">
+        <form method="post">
+            {% csrf_token %}
+            <input type="text" id="id_content" name="content">
+            <button type="submit">Post</button>
+        </form>
+    </div>
+{% endblock %}

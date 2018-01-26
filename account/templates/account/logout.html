@@ -1,0 +1,19 @@
+{% extends 'base_simple.html' %}
+{% load static %}
+
+{% block title %}Logged Out{% endblock %}
+
+{% block stylesheet %}
+<link rel="stylesheet" type="text/css" href="{% static 'account/css/login_register.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="outer">
+	<div class="middle">
+		<div class="inner">
+			<h1 class="cursive logout">You have been logged out.</h1>
+			<a href="{% url 'login' %}" class="under_logout_link">LOG IN -- PLACEHOLDER</a>
+		</div>
+	</div>
+</div>
+{% endblock %}

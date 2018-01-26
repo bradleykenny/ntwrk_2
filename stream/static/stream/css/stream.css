@@ -1,0 +1,272 @@
+/*
+
+==========================================================
+
+STREAM.CSS
+VERSION: 0.1
+
+----------------------------------------------------------
+
+STYLESHEET USED TO DESIGN THE STREAM PAGES
+
+PAGES: STREAM
+
+==========================================================
+
+*/
+
+/* PASTELS 1 https://coolors.co/4d9de0-e15554-e1bc29-3bb273-7768ae */
+/*  blue: 4D9DE0, green: 3BB273, red: E15554, violet: 7768AE, yellow: E1BC29 */
+
+/* PASTELS 2 https://coolors.co/456990-42b5a7-e06271-e88361-e3c567 */
+/* BRIGHT https://coolors.co/5bc0eb-fde74c-9bc53d-e55934-fa7921 */
+
+/* ===== GENERAL ===== */
+
+body {
+    margin: 0px 0px 0px 0px;
+    padding: 0px;
+
+    background-color: #EFEFEF;
+}
+header {
+    width: 100%;
+
+    position: fixed;
+    margin: 0px;
+    /* margin-top: -63px; */
+    padding: 10px 0;
+
+    background-color: #4D9DE0;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+}
+
+main {
+    margin: 0px;
+    padding-top: 20px;
+}
+
+h1 {
+    display: inline-block;
+}
+
+/* ===== LOGO ===== */
+
+.logo {
+    float: left;
+    margin: 0px 25px;
+
+    font-size: 32px;
+    color: white;
+    background-color: white;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.logo:hover {
+    /* look at doing other browsers */
+    background-image: linear-gradient(to bottom, #fff, #fff, #4D9DE0);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+/* ===== NAV BAR ===== */
+
+/* the <ul> describes the links on the right of the bar */
+ul {
+    float: right;
+    margin: 0px auto;
+    margin-right: 25px;
+}
+ul a {
+    float: left;
+    display: inline-block;
+    margin-top: 2.5px;
+    margin-left: 10px;
+    padding: 10px 15px;
+
+    color: #ffffff;
+    font-size: 12px;
+    background-color: rgba(0, 0, 0 , 0.2);
+    border-radius: 5px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+ul a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+ul a:focus {
+    border-bottom: none;
+    padding-top: 12px;
+}
+
+/* ===== SEARCH ===== */
+
+header input[type='text'] {
+    float: left;
+    font-size: 14px;
+	color: #ffffff;
+
+	height: 25px;
+	width: 300px;
+
+	margin: 2.5px auto 0px 0px;
+	padding: 3.5px 12px;
+
+	background-color: rgba(0, 0, 0, 0.1);
+
+	border: none;
+	border: 2px solid rgba(0, 0, 0, 0.2);
+	border-radius: 5px;
+	outline: none;
+}
+
+header input[type='text']::placeholder {
+    color: #e5e5e5;
+}
+
+/* ===== CONTENT ===== */
+
+#content_all {
+    width: 100%;
+    display: inline-block;
+    margin: 0;
+    margin-top: 63px;
+}
+
+#content_left, #content_main, #content_right {
+    height: 100%;
+    float: left;
+    padding-top: 20px;
+}
+
+#content_left {
+    display: inline-block;
+    width: 25%;
+    /* background-color: rgba(0, 0, 0, 0.2); */
+}
+
+#content_main {
+    display: inline-block;
+    width: 40%;
+    background-color: #EFEFEF;
+    /* padding-top: 30px; */
+    padding: 0px 5%;
+}
+
+#content_right {
+    display: inline-block;
+    width: 25%;
+    /* background-color: rgba(0, 0, 0, 0.2); */
+}
+
+#content_main h1 {
+    display: inline-block;
+    margin: 20px auto 10px;
+}
+
+/* ===== POSTS ===== */
+
+.card {
+    box-shadow: none;
+    margin: 15px 10px 15px 65px;
+    border: 3px solid rgba(0, 0, 0, 0.2);
+
+    padding: 5px 25px;
+}
+
+.dp {
+    height: 50px; width: 50px;
+
+    margin: -8px 0px 0px -90px;
+    float: left;
+
+    background-color: #CDCDCD;
+    border: 3px solid #4D9DE0;
+    border-radius: 5px;
+}
+
+.card h2, .card h3 {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 1em;
+    text-decoration: none;
+}
+
+.card h2 {
+    color: #4D9DE0;
+    font-weight: normal;
+}
+
+.card h3 {
+    float: right;
+    margin-top: 13px;
+    font-weight: normal;
+    color: #343434;
+}
+
+.card p {
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.card .link {
+    display: inline-block;
+    color: #4D9DE0;
+    margin: 0px 10px 10px 0px;
+}
+
+/* ===== SHARE CARD ===== */
+
+.share_card {
+    padding: 0px 0px 5px 25px;
+    float: left;
+    /* margin-bottom: 20px; */
+}
+
+.share_card .button {
+    text-align: center;
+    display: inline;
+    width: 180px;
+    float: left;
+    margin-right: 25px;
+    margin-top: 5px;
+}
+
+.share_card h1 {
+    margin-bottom: -10px;
+    font-size: 16px;
+}
+
+.share_card img {
+    margin-top: -2px;
+}
+
+/* TODO: REMOVE THIS AND FIGURE OUT HOW TO DIVIDE THE SHARE POST AND REGULAR POSTS */
+hr {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    margin: 5px 15px 5px 70px;
+}
+
+.share_card .text {
+    background-color: #E15554;
+}
+
+.share_card .image {
+    background-color: #7768AE;
+}
+
+/* ===== TEMPORARY / TESTING ===== */
+
+.logo_cus1 {
+    float: none;
+    color: black;
+    margin: 0px;
+}
+
+.logo_cus1:hover {
+    color: black;
+}

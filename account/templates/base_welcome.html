@@ -1,0 +1,37 @@
+{% extends 'base_simple.html' %}
+{% load static %}
+
+{% block title %}Log In{% endblock %}
+
+{% block stylesheet %}
+<link rel="stylesheet" type="text/css" href="{% static 'account/css/login_register.css' %}">
+{% endblock %}
+
+{% block content %}
+<!-- outer, middle, inner are used to centre the .card div -->
+<div class="outer">
+	<div class="middle">
+		<div class="inner">
+			<h1 class="welcome_text">Welcome to <span class="logo" id="logo_header">ntwrk</span><sup>a</sup></h1>
+			<div class="card" id="info_box">
+				<h2><!-- It's  --><span class="cursive">Simple.</span></h2>
+				<p>
+					With an easy-to-use interface and user-friendly concepts, getting to learn <span class="logo">ntwrk</span> is simple. There isn't much not to love about this new social network. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis cursus metus, vel volutpat mi. Donec tortor erat, facilisis eu enim quis, vestibulum scelerisque urna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed imperdiet in justo ultricies porta.<br>
+				</p>
+
+				<h2><!-- It's  --><span class="cursive">You.</span></h2>
+				<p>
+					Sed sed augue nec risus consequat mattis. Praesent egestas turpis non elit consequat, nec efficitur quam ultrices. Cras congue eget nulla sed rhoncus. Phasellus vehicula fermentum tortor nec rhoncus. Nunc lacinia augue sagittis, luctus odio maximus, molestie magna. Aliquam a sem ac tortor varius faucibus sit amet a est. Vestibulum dolor risus, euismod vitae eleifend consectetur, auctor vitae lectus. Pellentesque rutrum neque lacus, finibus hendrerit ex sollicitudin vitae. Aenean pretium justo odio, dictum mattis eros posuere sit amet. Aliquam vel convallis lorem. Vivamus ac neque eget ipsum suscipit pellentesque.
+				</p>
+
+				<h2><!-- It's  --><span class="cursive">Powerful.</span></h2>
+				<p>
+					Mauris eu dictum turpis, mollis mattis nunc. Suspendisse non erat luctus, tempus dui eget, auctor neque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc et nisi porttitor, tincidunt elit ac, suscipit metus. Sed mattis congue viverra. Nulla luctus augue ut aliquam feugiat. In maximus, ante sed auctor consectetur, enim elit vulputate metus, sit amet pharetra sem quam quis nisi.  <br>
+				</p>
+			</div>
+			{% block login_reg %}
+			{% endblock %}
+		</div>
+	</div>
+</div>
+{% endblock %}

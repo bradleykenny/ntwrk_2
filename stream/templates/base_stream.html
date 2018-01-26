@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block stylesheet %}
+<link rel="stylesheet" type="text/css" href="{% static 'stream/css/stream.css' %}">
+{% endblock %}
+
+{% block title %}Stream{% endblock %}
+
+{% block content %}
+<div id="content_all">
+    <div id="content_left">
+        <p> </p>
+    </div>
+    <div id="content_main">
+        {% block stream %}
+        {% endblock %}
+    </div>
+    <div id="content_right">
+        <p> </p>
+    </div>
+{% endblock %}

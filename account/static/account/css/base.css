@@ -1,0 +1,173 @@
+/*
+
+==========================================================
+
+BASE.CSS
+VERSION: 0.1 BETA
+
+----------------------------------------------------------
+
+THIS IS THE STYLESHEET TO DESCRIBE ALL BASIC ELEMENTS IN
+THE SITE. THESE INCLUDE THE LOGO, CARDS AND BUTTONS.
+
+PAGES: ALL
+
+==========================================================
+
+KEY FACTS:
+- PRIMARY COLOUR: #1E90FF
+
+*/
+
+body {
+	font-family: 'Helvetica';
+
+	margin: 0px;
+	padding: 0px;
+}
+
+a {
+	text-decoration: none;
+}
+
+/*
+LOGO:
+
+SOME OF THESE WILL CHANGE DEPENDING ON WHERE
+THE LOGO IS PLACED. THESE ARE STANDARD VALUES.
+CHANGE WITH AN ID CLASS.
+
+ALL LOGOS SHOULD HAVE A
+HOVER EFFECT AND CHANGE COLOR/DIM/BRIGHTEN IN SOME
+WAY.
+*/
+
+.logo {
+	font-family: 'Righteous', sans-serif;
+	color: rgb(35, 35, 35);
+
+	margin: 12px auto 4px auto;
+
+	user-select: none;
+}
+
+/*
+TODO: USE PYTHON TO IMPLEMENT THE .JS WAY OF CHANGING
+THE COLOR OF THE LOGO
+*/
+
+.logo:hover {
+	transition: 0.25s ease;
+	color: rgb(20, 20, 20);
+}
+
+/*
+CARDS:
+
+WILL VARY IN SIZE AND CONTENT. SHOULDN'T NEED TO
+CHANGE ANY VALUES IN THESE EXCEPT MAYBE PADDING
+AND MARGIN. WILL UPDATE WITH CONFIRMATION.
+
+BUTTON COLOR WILL CHANGE DEPENDING ON CONTENT IT
+IS LINKED TO. WILL CONNECT THIS TO A PYTHON SCRIPT.
+*/
+
+.card {
+	padding: 7.5px 15px 14px 15px;
+
+	background-color: rgba(255, 255, 255, 1);
+	border-radius: 5px;
+
+	box-shadow: 0 0 25px #000000;
+	border-top: 3px solid rgba(0, 0, 0, 0.2);
+	border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+}
+
+.card button, .button {
+	font-size: 14px;
+	color: #ffffff;
+
+	width: 251px;
+
+	margin: 10px auto 10px auto;
+	padding: 10px 15px 10px 15px;
+
+	background-color: #4D9DE0;
+
+	border: none;
+	border-radius: 5px;
+	border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+	outline: none;
+
+	transition: 0.25s ease;
+
+	cursor: pointer;
+}
+
+.card button:hover {
+	background-color: rgb(80, 80, 80);
+}
+
+.card input[type='text'],
+.card input[type='password'] {
+	font-size: 14px;
+	color: #2F4F4F;
+
+	height: 30px;
+	width: 235px;
+
+	margin: 0px auto -5px auto;
+	padding: 3.5px 8px;
+
+	background-color: rgba(255, 255, 255, 0);
+
+	border: none;
+	border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+	border-radius: 0px;
+	outline: none;
+}
+
+/* QUESTION: DO I NEED THE .CARD BEFORE EVERY INPUT? */
+.card input[type='text']:hover,
+.card input[type='text']:focus,
+.card input[type='password']:hover,
+.card input[type='password']:focus {
+	transition: 0.75s ease;
+	border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+/*
+NOTIFICATIONS:
+
+NO NEED TO DIFFER. THREE DIFFERENT TYPES OF
+NOTIFICATIONS DEPENDING ON TYPE: ERROR,
+SUCCESSFUL AND INFORMATIONAL/NEUTRAL
+
+NEED TO EDIT SO THAT THEY ARE UNIFORM AND
+CONSISTENT ON ALL PAGES... THINKING THEY SHOULD BE
+TOP, MIDDLE OF THE PAGE ABOUT 15PX BELOW NAV BAR
+*/
+
+.notification {
+	width: 250px;
+
+	margin: 15px 0px -5px 0px; /* do i need this??? */
+	padding-top: 7.5px;
+	padding-bottom: 7.5px;
+	border-radius: 5px;
+
+	text-align: center;
+
+	font-family: sans-serif;
+	font-size: 14px;
+}
+
+.error {
+	background-color: rgba(255, 0, 0, 0.4);
+	/* choose a font color */
+}
+
+.success {
+	background-color: rgba(0, 180, 0, 0.4);
+	/* choose a font color */
+}

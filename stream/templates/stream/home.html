@@ -1,0 +1,37 @@
+{% extends 'base_stream.html' %}
+{% load static %}
+
+{% block stream %}
+    {% if user.is_authenticated %}
+    <div class="card share_card">
+        <a href="{% url 'home' %}">
+            <img src="{% static 'stream/img/dp/admin.jpg' %}" class="dp">
+        </a>
+        <h1>Want to share something?</h1><br>
+        <a href="{% url 'new_post' %}" class="button text">Text</a>
+        <a href="{% url 'home' %}" class="button image">Image</a>
+    </div>
+    {% endif %}
+
+    <hr>
+
+    {% for post in posts %}
+    <div class="card">
+        <a href="{% url 'home' %}">
+            <img src="{% static 'stream/img/dp/admin.jpg' %}" class="dp">
+        </a>
+        <a href="{% url 'home' %}">
+            <h2><b>{{ post.posted_by.username }}</b>: {{ post.posted_by.first_name }} {{ post.posted_by.last_name }}</h2>
+        </a>
+        <h3>{{ post.posted_at|date:'d M Y, h:iA' }}</h2>
+        <p>{{ post.content }}</p>
+        <a href="{% url 'home' %}" class="link">Comment</a>
+        <a href="{% url 'home' %}" class="link">Share</a>
+        <a href="{% url 'home' %}" class="link">View</a>
+        {% if post.posted_by == request.user %}
+        <a href="{% url 'home' %}" class="link">Edit</a>
+        <a href="{% url 'delete_post' post.id %}" class="link">Delete</a>
+        {% endif %}
+    </div>
+    {% endfor %}
+{% endblock %}

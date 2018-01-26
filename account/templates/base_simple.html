@@ -1,0 +1,20 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>ntwrk: {% block title %}{% endblock %}</title>
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="{% static 'account/css/base.css' %}">
+		{% block stylesheet %}
+		{% endblock %}
+	</head>
+	<body>
+		<!-- if already logged in, redirect to the stream -->
+		<main>
+			{% block content %}
+			{% endblock %}
+		</main>
+	</body>
+</html>
