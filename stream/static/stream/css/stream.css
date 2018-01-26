@@ -245,12 +245,6 @@ header input[type='text']::placeholder {
     margin-top: -2px;
 }
 
-/* TODO: REMOVE THIS AND FIGURE OUT HOW TO DIVIDE THE SHARE POST AND REGULAR POSTS */
-hr {
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    margin: 5px 15px 5px 70px;
-}
-
 .share_card .text {
     background-color: #7768AE;
 }
