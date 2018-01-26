@@ -118,10 +118,15 @@ header input[type='text'] {
 
 	background-color: rgba(0, 0, 0, 0.1);
 
-	border: none;
 	border: 2px solid rgba(0, 0, 0, 0.2);
 	border-radius: 5px;
 	outline: none;
+}
+
+header input[type='text']:focus,
+header input[type='text']:hover {
+    transition: 0.75s ease;
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 header input[type='text']::placeholder {
