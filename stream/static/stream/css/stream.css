@@ -252,12 +252,21 @@ hr {
 }
 
 .share_card .text {
-    background-color: #E15554;
+    background-color: #7768AE;
 }
 
 .share_card .image {
-    background-color: #7768AE;
+    background-color: #E1BC29;
 }
+
+.share_card .video {
+    background-color: #3BB273;
+}
+
+.share_card .audio {
+    background-color: #E15554; /* TODO: LOOK AT USING AN ORANGE INSTEAD */
+}
+
 
 /* ===== TEMPORARY / TESTING ===== */
 
