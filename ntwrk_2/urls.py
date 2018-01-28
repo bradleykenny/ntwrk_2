@@ -20,6 +20,7 @@ urlpatterns = [
 	path('stream/<post_id>/delete_post/', stream.views.delete_post, name='delete_post'),
 	path('stream/<post_id>/view_post/', stream.views.view_post, name='view_post'),
 
+	path('update/', account.views.update_profile, name='update_profile'),
 	# access to admin tools
 	path('admin/', admin.site.urls),
 ]
