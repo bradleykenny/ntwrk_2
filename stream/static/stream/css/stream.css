@@ -183,6 +183,10 @@ header input[type='text']::placeholder {
     padding: 5px 25px;
 }
 
+.card:hover {
+    border: 3px solid rgba(0, 0, 0, 0.3);
+}
+
 .dp {
     height: 50px; width: 50px;
 
@@ -192,6 +196,11 @@ header input[type='text']::placeholder {
     background-color: #CDCDCD;
     border: 3px solid #4D9DE0;
     border-radius: 5px;
+}
+
+.dp:hover {
+    transition: ease 0.75s;
+    border: 3px solid #456990;
 }
 
 .card h2, .card h3 {
@@ -224,7 +233,8 @@ header input[type='text']::placeholder {
     margin: 0px 10px 10px 0px;
 }
 
-.card .link:hover {
+.card .link:hover,
+.card h2:hover {
     transition: 0.75s ease;
     color: #456990;
 }
