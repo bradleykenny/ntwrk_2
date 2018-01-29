@@ -168,9 +168,9 @@ header input[type='text']::placeholder {
     /* background-color: rgba(0, 0, 0, 0.2); */
 }
 
-#content_main h1 {
+#content_main .content_heading {
     display: inline-block;
-    margin: 20px auto 10px;
+    margin: 30px auto 5px 40px;
 }
 
 /* ===== POSTS ===== */
@@ -183,9 +183,10 @@ header input[type='text']::placeholder {
     padding: 5px 25px;
 }
 
-.card:hover {
+/* .card:hover {
+    transition: ease 0.75s;
     border: 3px solid rgba(0, 0, 0, 0.3);
-}
+} */
 
 .dp {
     height: 50px; width: 50px;
@@ -239,6 +240,10 @@ header input[type='text']::placeholder {
     color: #456990;
 }
 
+#remove:hover {
+    color: #E15554;
+}
+
 /* ===== SHARE CARD ===== */
 
 .share_card {
@@ -259,7 +264,8 @@ header input[type='text']::placeholder {
 }
 
 .share_card h1 {
-    margin-bottom: -10px;
+    margin-top: 15px;
+    padding-left: 5px;
     font-size: 16px;
 }
 
@@ -285,7 +291,3 @@ header input[type='text']::placeholder {
 
 
 /* ===== TEMPORARY / TESTING ===== */
-
-.posts_heading {
-    padding-left: 25px;
-}

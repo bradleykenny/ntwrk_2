@@ -54,7 +54,7 @@ def update_profile(request):
         if user_form.is_valid() and profile_form.is_valid():
             user_form.save()
             profile_form.save()
-            messages.success(request, _('Your profile was successfully updated!'))
+            # messages.success(request, _('Your profile was successfully updated!'))
             return redirect('settings:profile')
         else:
             messages.error(request, _('Please correct the error below.'))

@@ -16,7 +16,7 @@
     {% endif %}
 
 
-    <h1 class="posts_heading">Posts</h1>
+    <h1 class="content_heading">Posts</h1>
     {% for post in posts %}
     <div class="card">
         <a href="{% url 'home' %}">
@@ -32,7 +32,7 @@
         <a href="{% url 'view_post' post.id %}" class="link">View</a>
         {% if post.posted_by == request.user %}
         <a href="{% url 'home' %}" class="link">Edit</a>
-        <a href="{% url 'delete_post' post.id %}" class="link">Delete</a>
+        <a href="{% url 'delete_post' post.id %}" class="link" id="remove">Remove</a>
         {% endif %}
     </div>
     {% endfor %}
