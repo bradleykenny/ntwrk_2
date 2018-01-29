@@ -5,6 +5,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 
 from .forms import LoginForm, RegistrationForm, UserForm, ProfileForm
+from stream.models import Post
 
 def index(request):
 	return render(request, 'home.html')
@@ -61,7 +62,7 @@ def update_profile(request):
     else:
         user_form = UserForm(instance=request.user)
         profile_form = ProfileForm(instance=request.user.profile)
-    return render(request, 'account/profile.html', {
+    return render(request, 'account/edit_profile.html', {
         'user_form': user_form,
         'profile_form': profile_form
     })

@@ -15,10 +15,11 @@ urlpatterns = [
 
 	path('profile/update/', account.views.update_profile, name='update_profile'),
 
+	path('user/<username>/<post_id>/', stream.views.view_post, name='view_post'),
+
 	path('stream/', stream.views.home, name='home'),
 	path('stream/new_post/', stream.views.new_post, name='new_post'),
 	path('stream/<post_id>/delete_post/', stream.views.delete_post, name='delete_post'),
-	path('stream/<post_id>/view_post/', stream.views.view_post, name='view_post'),
 
 	# access to admin tools
 	path('admin/', admin.site.urls),

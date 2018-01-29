@@ -29,7 +29,7 @@
         <p>{{ post.content }}</p>
         <a href="{% url 'home' %}" class="link">Comment</a>
         <a href="{% url 'home' %}" class="link">Share</a>
-        <a href="{% url 'view_post' post.id %}" class="link">View</a>
+        <a href="{% url 'view_post' post.posted_by.username post.id %}" class="link">View</a>
         {% if post.posted_by == request.user %}
         <a href="{% url 'home' %}" class="link">Edit</a>
         <a href="{% url 'delete_post' post.id %}" class="link" id="remove">Remove</a>

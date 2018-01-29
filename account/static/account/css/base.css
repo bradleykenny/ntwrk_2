@@ -99,13 +99,17 @@ IS LINKED TO. WILL CONNECT THIS TO A PYTHON SCRIPT.
 	border-bottom: 3px solid rgba(0, 0, 0, 0.2);
 	outline: none;
 
-	transition: 0.25s ease;
-
 	cursor: pointer;
 }
 
 .card button:hover {
-	background-color: rgb(80, 80, 80);
+	transition: 0.25s ease;
+	background-color: #456990;
+}
+
+sup:hover {
+	transition: 0.75s ease;
+	color: #4D9DE0;
 }
 
 .card input[type='text'],

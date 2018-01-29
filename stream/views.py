@@ -29,6 +29,7 @@ def delete_post(request, post_id):
 		post.delete()
 	return render(request, 'stream/delete_post.html', {'post': post, 'current_user': current_user, 'post_user': post_user })
 
-def view_post(request, post_id):
+def view_post(request, username, post_id):
+	# NOTE: implement in template too
 	post = Post.objects.get(id=post_id)
 	return render(request, 'stream/view_post.html', {'post':post})
