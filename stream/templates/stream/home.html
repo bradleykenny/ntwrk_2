@@ -19,6 +19,11 @@
     <h1 class="content_heading">Posts</h1>
     {% for post in posts %}
     <div class="card">
+        {% if request.user not in user.followers.all %}
+                Follow
+        {% else %}
+            Unfollow
+        {% endif %}
         <a href="{% url 'home' %}">
             <img src="{% static 'stream/img/dp/admin.jpg' %}" class="dp">
         </a>

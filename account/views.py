@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
+from django.contrib.auth.decorators import login_required
 
 from .forms import LoginForm, RegistrationForm, UserForm, ProfileForm
 from stream.models import Post
@@ -46,8 +47,8 @@ def register(request):
 	return render(request, 'account/register.html', { 'form': form })
 
 # TODO: IMPLEMENT @login and @transaction
-# @login_required
 # @transaction.atomic
+@login_required
 def update_profile(request):
     if request.method == 'POST':
         user_form = UserForm(request.POST, instance=request.user)
@@ -66,3 +67,8 @@ def update_profile(request):
         'user_form': user_form,
         'profile_form': profile_form
     })
+
+
+@login_required
+def user_follow(request):
+	return
