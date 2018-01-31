@@ -130,7 +130,8 @@ header input[type='text']:hover {
 }
 
 header input[type='text']::placeholder {
-    color: #e5e5e5;
+    color: #FFFFFF;
+    opacity: 0.8;
 }
 
 /* ===== CONTENT ===== */
