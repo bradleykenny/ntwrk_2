@@ -160,7 +160,7 @@ header input[type='text']::placeholder {
 #content_main {
     display: inline-block;
     width: 40%;
-    background-color: #EFEFEF;
+    /* background-color: #EFEFEF; */
     /* padding-top: 30px; */
     padding: 0px 5%;
 }
@@ -179,9 +179,9 @@ header input[type='text']::placeholder {
 /* ===== POSTS ===== */
 
 .card {
-    box-shadow: none;
-    margin: 15px 10px 15px 65px;
-    border: 3px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    margin: 15px 10px 30px 65px;
+    /* border: 3px solid rgba(0, 0, 0, 0.2); */
 
     padding: 5px 25px;
 }
@@ -205,7 +205,7 @@ header input[type='text']::placeholder {
 .dp:hover {
 	height: 50px; width: 50px;
     transition: ease 0.75s;
-    border: 3px solid #456990;
+    border: 3px solid darkgrey;
 }
 
 .card h2, .card h3 {
@@ -291,6 +291,10 @@ header input[type='text']::placeholder {
 
 .share_card .audio {
     background-color: #E88361; /* TODO: LOOK AT USING AN ORANGE INSTEAD */
+}
+
+.helptext {
+	display: none;
 }
 
 

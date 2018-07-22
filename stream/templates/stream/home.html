@@ -25,11 +25,11 @@
             Unfollow
         {% endif %} -->
         <a href="{% url 'home' %}">
-            <img src="{% static 'stream/img/dp/admin.jpg' %}" class="dp">
+            <img src="{% static 'stream/img/dp/placeholder.png' %}" class="dp">
         </a>
-        <a href="{% url 'home' %}">
+        <a href="{% url 'profile' post.posted_by.pk %}">
             <h2>
-				<b>{{ post.posted_by.username }}</b>{% if post.posted_by.first_name|length > 0 %}: {{ post.posted_by.first_name }} {{ post.posted_by.last_name }}{% endif %}
+				<b>{{ post.posted_by }}</b>{% if post.posted_by.first_name|length > 0 %}: {{ post.posted_by.first_name }} {{ post.posted_by.last_name }}{% endif %}
 			</h2>
         </a>
         <h3>{{ post.posted_at|date:'d M Y' }}</h2> <!-- d M Y, h:iA -->

@@ -15,9 +15,10 @@ def home(request):
 	return render(request, 'account/home.html')
 
 # TODO: make this per user, not just for the logged in user
-def profile(request, username):
+def profile(request, cur_user):
 	posts = Post.objects.all()
-	return render(request, 'account/profile.html', { 'posts': posts, 'username': username })
+	cur_user_obj = User.objects.get(pk=cur_user)
+	return render(request, 'account/profile.html', { 'posts': posts, 'cur_user': cur_user_obj })
 
 def account_login(request):
 	if request.method == 'POST':

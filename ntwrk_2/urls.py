@@ -14,7 +14,7 @@ urlpatterns = [
 	path('logout/', auth_views.logout, { 'template_name': 'account/logout.html' }, name='logout'),
 
 	path('profile/update/', account.views.update_profile, name='update_profile'),
-	path('user/<username>', account.views.profile, name='profile'),
+	path('user/<cur_user>', account.views.profile, name='profile'),
 
 	path('user/<username>/<post_id>/', stream.views.view_post, name='view_post'),
 

@@ -78,8 +78,8 @@ IS LINKED TO. WILL CONNECT THIS TO A PYTHON SCRIPT.
 	border-radius: 5px;
 
 	box-shadow: 0 0 25px #000000;
-	border-top: 3px solid rgba(0, 0, 0, 0.2);
-	border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+	/* border-top: 3px solid rgba(0, 0, 0, 0.2);
+	border-bottom: 3px solid rgba(0, 0, 0, 0.2); */
 }
 
 .card button, .button {

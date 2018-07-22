@@ -1,4 +1,4 @@
-{% extends 'base_stream.html' %}
+{% extends 'base.html' %}
 {% load static %}
 
 {% block stylesheet %}
@@ -6,51 +6,63 @@
 <link rel="stylesheet" type="text/css" href="{% static 'account/css/profile.css' %}">
 {% endblock %}
 
-{% block stream %}
+{% block title %}Stream{% endblock %}
 
+{% block content %}
 
+<!-- {% if user.is_authenticated %}
+<div class="card share_card">
+	<a href="{% url 'home' %}">
+		<img src="{% static 'stream/img/dp/admin.jpg' %}" class="dp">
+	</a>
+	<h1>Want to share something?</h1><br>
+	<a href="{% url 'new_post' %}" class="button text">Text</a>
+	<a href="{% url 'home' %}" class="button image">Image</a>
+	<a href="{% url 'home' %}" class="button video">Video</a>
+	<a href="{% url 'home' %}" class="button audio">Audio</a>
+</div>
+{% endif %} -->
 
-    <!-- {% if user.is_authenticated %}
-    <div class="card share_card">
-        <a href="{% url 'home' %}">
-            <img src="{% static 'stream/img/dp/admin.jpg' %}" class="dp">
-        </a>
-        <h1>Want to share something?</h1><br>
-        <a href="{% url 'new_post' %}" class="button text">Text</a>
-        <a href="{% url 'home' %}" class="button image">Image</a>
-        <a href="{% url 'home' %}" class="button video">Video</a>
-        <a href="{% url 'home' %}" class="button audio">Audio</a>
+<div id="content_all">
+	<div id="cover">
+		<h2>{{ cur_user.username }}</h2>
+		<h1>{{ cur_user.first_name }} {{ cur_user.last_name }}</h1>
+	</div>
+    <div id="content_left">
+        <p> </p>
     </div>
-    {% endif %} -->
-
-
-    <h1 class="content_heading">Posts</h1>
-    {% for post in posts %}
-		{% if post.posted_by.username == username %}
-	    <div class="card">
-	        <!-- {% if request.user not in user.followers.all %}
-	                Follow
-	        {% else %}
-	            Unfollow
-	        {% endif %} -->
-	        <a href="{% url 'home' %}">
-	            <img src="{% static 'stream/img/dp/admin.jpg' %}" class="dp">
-	        </a>
-	        <a href="{% url 'home' %}">
-	            <h2>
-					<b>{{ post.posted_by.username }}</b>{% if post.posted_by.first_name|length > 0 %}: {{ post.posted_by.first_name }} {{ post.posted_by.last_name }}{% endif %}
-				</h2>
-	        </a>
-	        <h3>{{ post.posted_at|date:'d M Y' }}</h2> <!-- d M Y, h:iA -->
-	        <p>{{ post.content }}</p>
-	        <a href="{% url 'home' %}" class="link">Comment</a>
-	        <a href="{% url 'home' %}" class="link">Share</a>
-	        <a href="{% url 'view_post' post.posted_by.username post.id %}" class="link">View</a>
-	        {% if post.posted_by == request.user %}
-	        <a href="{% url 'home' %}" class="link">Edit</a>
-	        <a href="{% url 'delete_post' post.id %}" class="link" id="remove">Remove</a>
-	        {% endif %}
-	    </div>
-		{% endif %}
-    {% endfor %}
+    <div id="content_main">
+		<h1 class="content_heading">Posts</h1>
+		{% for post in posts %}
+			{% if post.posted_by.username == cur_user.username %}
+		    <div class="card">
+		        <!-- {% if request.user not in user.followers.all %}
+		                Follow
+		        {% else %}
+		            Unfollow
+		        {% endif %} -->
+		        <a href="{% url 'home' %}">
+		            <img src="{% static 'stream/img/dp/admin.jpg' %}" class="dp">
+		        </a>
+		        <a href="{% url 'home' %}">
+		            <h2>
+						<b>{{ post.posted_by.username }}</b>{% if post.posted_by.first_name|length > 0 %}: {{ post.posted_by.first_name }} {{ post.posted_by.last_name }}{% endif %}
+					</h2>
+		        </a>
+		        <h3>{{ post.posted_at|date:'d M Y' }}</h2> <!-- d M Y, h:iA -->
+		        <p>{{ post.content }}</p>
+		        <a href="{% url 'home' %}" class="link">Comment</a>
+		        <a href="{% url 'home' %}" class="link">Share</a>
+		        <a href="{% url 'view_post' post.posted_by.username post.id %}" class="link">View</a>
+		        {% if post.posted_by == request.user %}
+		        <a href="{% url 'home' %}" class="link">Edit</a>
+		        <a href="{% url 'delete_post' post.id %}" class="link" id="remove">Remove</a>
+		        {% endif %}
+		    </div>
+			{% endif %}
+	    {% endfor %}
+    </div>
+    <div id="content_right">
+        <p> </p>
+    </div>
 {% endblock %}

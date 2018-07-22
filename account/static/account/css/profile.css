@@ -18,5 +18,24 @@ PAGES: PROFILE
 /* ===== GENERAL ===== */
 
 body {
-	
+
+}
+
+#cover {
+	height: 250px;
+	width: 100%;
+	margin-top: -25px;
+	margin-bottom: 100px;
+
+	z-index: -9;
+
+	position: absolute;
+
+	background-color: darkgrey;
+
+	box-shadow: 0 0 10px rgba(0,0,0,0.3) inset;
+}
+
+#content_main {
+	margin-top: 250px;
 }
