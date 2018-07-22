@@ -19,18 +19,20 @@
     <h1 class="content_heading">Posts</h1>
     {% for post in posts %}
     <div class="card">
-        {% if request.user not in user.followers.all %}
+        <!-- {% if request.user not in user.followers.all %}
                 Follow
         {% else %}
             Unfollow
-        {% endif %}
+        {% endif %} -->
         <a href="{% url 'home' %}">
             <img src="{% static 'stream/img/dp/admin.jpg' %}" class="dp">
         </a>
         <a href="{% url 'home' %}">
-            <h2><b>{{ post.posted_by.username }}</b>: {{ post.posted_by.first_name }} {{ post.posted_by.last_name }}</h2>
+            <h2>
+				<b>{{ post.posted_by.username }}</b>{% if post.posted_by.first_name|length > 0 %}: {{ post.posted_by.first_name }} {{ post.posted_by.last_name }}{% endif %}
+			</h2>
         </a>
-        <h3>{{ post.posted_at|date:'d M Y, h:iA' }}</h2>
+        <h3>{{ post.posted_at|date:'d M Y' }}</h2> <!-- d M Y, h:iA -->
         <p>{{ post.content }}</p>
         <a href="{% url 'home' %}" class="link">Comment</a>
         <a href="{% url 'home' %}" class="link">Share</a>

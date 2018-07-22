@@ -58,7 +58,6 @@ THE COLOR OF THE LOGO
 
 .logo:hover {
 	transition: 0.25s ease;
-	color: rgb(20, 20, 20);
 }
 
 /*
@@ -94,17 +93,19 @@ IS LINKED TO. WILL CONNECT THIS TO A PYTHON SCRIPT.
 
 	background-color: #4D9DE0;
 
+	text-transform: uppercase;
+
 	border: none;
 	border-radius: 5px;
-	border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+	/* border-bottom: 3px solid rgba(0, 0, 0, 0.2); */
 	outline: none;
 
 	cursor: pointer;
 }
 
-.card button:hover {
+.button:hover {
 	transition: 0.25s ease;
-	background-color: #456990;
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
 }
 
 sup:hover {
@@ -174,4 +175,11 @@ TOP, MIDDLE OF THE PAGE ABOUT 15PX BELOW NAV BAR
 .success {
 	background-color: rgba(0, 180, 0, 0.4);
 	/* choose a font color */
+}
+
+.edit_profile {
+	border-radius: 5px;
+	border: solid 3px rgba(0,0,0,0.2);
+	padding: 15px 25px 20px;
+	background-color: white;
 }

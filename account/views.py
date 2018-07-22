@@ -14,6 +14,11 @@ def index(request):
 def home(request):
 	return render(request, 'account/home.html')
 
+# TODO: make this per user, not just for the logged in user
+def profile(request, username):
+	posts = Post.objects.all()
+	return render(request, 'account/profile.html', { 'posts': posts, 'username': username })
+
 def account_login(request):
 	if request.method == 'POST':
 		form = LoginForm(request.POST)
@@ -57,7 +62,7 @@ def update_profile(request):
             user_form.save()
             profile_form.save()
             # messages.success(request, _('Your profile was successfully updated!'))
-            return redirect('settings:profile')
+            return redirect('../../profile/update')
         else:
             messages.error(request, _('Please correct the error below.'))
     else:
