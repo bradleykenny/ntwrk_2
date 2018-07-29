@@ -25,7 +25,7 @@
 
 <div id="content_all">
 	<div id="cover">
-		<img src="{% static 'stream/img/dp/admin.jpg' %}">
+		<img src="/profile/media/{{ cur_user.profile.dp }}">
 		{% if cur_user.first_name|length > 0 %}
 		<h2>@{{ cur_user.username }}</h2><br>
 		<h1>{{ cur_user.first_name }} {{ cur_user.last_name }}</h1>
@@ -41,7 +41,7 @@
 		{% for post in posts %}
 			{% if post.posted_by.username == cur_user.username %}
 			<a href="{% url 'home' %}" class="dp">
-				<img src="{% static 'stream/img/dp/admin.jpg' %}">
+				<img src="/profile/media/{{ cur_user.profile.dp }}">
 			</a>
 		    <div class="card">
 		        <!-- {% if request.user not in user.followers.all %}

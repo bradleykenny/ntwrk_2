@@ -32,7 +32,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='profile',
             name='dp',
-            field=models.ImageField(default='img/dp/placeholder2.png', upload_to='img/'),
+            field=models.ImageField(default='dp/placeholder2.png', upload_to='img/'),
         ),
         migrations.AddField(
             model_name='profile',

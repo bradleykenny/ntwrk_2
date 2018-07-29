@@ -19,7 +19,7 @@
     <h1 class="content_heading">Posts</h1>
     {% for post in posts %}
 	<a href="{% url 'home' %}" class="dp">
-		<img src="{% static 'stream/img/dp/placeholder2.png' %}"/>
+		<img src="/profile/media/{{ post.posted_by.profile.dp }}"/>
 	</a>
     <div class="card">
         <!-- {% if request.user not in user.followers.all %}

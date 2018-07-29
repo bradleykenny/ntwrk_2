@@ -18,7 +18,10 @@ def home(request):
 def profile(request, cur_user):
 	posts = Post.objects.all()
 	cur_user_obj = User.objects.get(pk=cur_user)
+	# cur_user_obj.profile.dp = 'dp/placeholder2.png'
+	# cur_user_obj.save()
 	return render(request, 'account/profile.html', { 'posts': posts, 'cur_user': cur_user_obj })
+
 
 def account_login(request):
 	if request.method == 'POST':
@@ -38,6 +41,7 @@ def account_login(request):
 		form = LoginForm()
 	return render(request, 'account/login.html', { 'form': form })
 
+
 def register(request):
 	if request.method == 'POST':
 		form = RegistrationForm(request.POST)
@@ -52,6 +56,7 @@ def register(request):
 		form = RegistrationForm()
 	return render(request, 'account/register.html', { 'form': form })
 
+
 # TODO: IMPLEMENT @login and @transaction
 # @transaction.atomic
 @login_required
@@ -64,8 +69,8 @@ def update_profile(request):
             profile_form.save()
             # messages.success(request, _('Your profile was successfully updated!'))
             return redirect('../../profile/update')
-        else:
-            messages.error(request, _('Please correct the error below.'))
+        # else:
+            # messages.error(request, _('Please correct the error below.'))
     else:
         user_form = UserForm(instance=request.user)
         profile_form = ProfileForm(instance=request.user.profile)
@@ -78,3 +83,7 @@ def update_profile(request):
 @login_required
 def user_follow(request):
 	return
+
+
+def dp_img(request):
+	return render(request, 'MEDIA/dp/')

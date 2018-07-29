@@ -1,6 +1,9 @@
 from django.contrib import admin
-from django.urls import path, include
+from django.conf import settings
+from django.urls import path, include, re_path
 from django.contrib.auth import views as auth_views
+
+from django.views.static import serve
 
 import account.views
 import stream.views
@@ -8,6 +11,8 @@ import stream.views
 urlpatterns = [
 	# path('account/', include('account.urls')),
 	# path('stream/', include('stream.urls')),
+
+	re_path(r'^profile/media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT,}),
 
 	path('login/', account.views.account_login, name='login'),
 	path('register/', account.views.register, name='register'),
