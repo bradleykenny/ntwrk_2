@@ -20,7 +20,7 @@ class Profile(models.Model):
 	location = models.CharField(max_length=30, blank=True, default=None)
 	birth_date = models.DateField(null=True, blank=True, default=None)
 	color = models.CharField(max_length=6, choices=COLORS, default='BLUE')
-	dp = models.ImageField(upload_to='img/', default='img/dp/placeholder2.png')
+	dp = models.ImageField(upload_to='dp/', default='dp/placeholder2.png')
 
 
 @receiver(post_save, sender=User)

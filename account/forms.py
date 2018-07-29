@@ -29,3 +29,6 @@ class ProfileForm(forms.ModelForm):
     class Meta:
         model = Profile
         fields = ('bio', 'location', 'color', 'dp')
+
+class PhotoForm(forms.Form):
+	image = forms.ImageField()

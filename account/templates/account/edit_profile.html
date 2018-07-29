@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block stream %}
-    <form method="post" class="edit_profile">
+    <form method="post" class="edit_profile" enctype="multipart/form-data">
     {% csrf_token %}
     {{ user_form.as_p }}
     {{ profile_form.as_p }}
