@@ -3,10 +3,10 @@
 
 {% block stream %}
     {% if user.is_authenticated %}
+	<a href="{% url 'home' %}">
+		<img src="{% static 'stream/img/dp/admin.jpg' %}" class="dp">
+	</a>
     <div class="card share_card">
-        <a href="{% url 'home' %}">
-            <img src="{% static 'stream/img/dp/admin.jpg' %}" class="dp">
-        </a>
         <h1>Want to share something?</h1><br>
         <a href="{% url 'new_post' %}" class="button text">Text</a>
         <a href="{% url 'home' %}" class="button image">Image</a>
@@ -18,18 +18,18 @@
 
     <h1 class="content_heading">Posts</h1>
     {% for post in posts %}
+	<a href="{% url 'home' %}" class="dp">
+		<img src="{% static 'stream/img/dp/placeholder2.png' %}"/>
+	</a>
     <div class="card">
         <!-- {% if request.user not in user.followers.all %}
                 Follow
         {% else %}
             Unfollow
         {% endif %} -->
-        <a href="{% url 'home' %}">
-            <img src="{% static 'stream/img/dp/placeholder.png' %}" class="dp">
-        </a>
         <a href="{% url 'profile' post.posted_by.pk %}">
             <h2>
-				<b>{{ post.posted_by }}</b>{% if post.posted_by.first_name|length > 0 %}: {{ post.posted_by.first_name }} {{ post.posted_by.last_name }}{% endif %}
+				<b>{% if post.posted_by.first_name|length > 0 %}{{ post.posted_by.first_name }} {{ post.posted_by.last_name }}{% endif %}</b> @{{ post.posted_by }}
 			</h2>
         </a>
         <h3>{{ post.posted_at|date:'d M Y' }}</h2> <!-- d M Y, h:iA -->

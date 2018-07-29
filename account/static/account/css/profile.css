@@ -39,3 +39,28 @@ body {
 #content_main {
 	margin-top: 250px;
 }
+
+#cover h2 {
+	margin: 0px 0px -10px 25px;
+	font-size: 20px;
+	font-weight: normal;
+}
+
+#cover h1 {
+	margin-left: 580px;
+}
+
+#cover h1, #cover h2 {
+	color: white;
+	text-shadow: 0 0 10px rgba(0,0,0,0.5);
+	display: inline;
+}
+
+#cover img {
+	height: 100px;
+	width: 100px;
+	display: inline-block;
+	margin: 100px 0 -60px 450px;
+	border-radius: 50%;
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
