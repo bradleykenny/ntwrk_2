@@ -5,7 +5,8 @@ from .models import Post
 
 def home(request):
 	posts = Post.objects.all()
-	return render(request, 'stream/home.html', {'posts': posts})
+	users = User.objects.all()
+	return render(request, 'stream/home.html', {'posts': posts, 'users': users})
 
 def new_post(request):
 	if request.method == 'POST':
