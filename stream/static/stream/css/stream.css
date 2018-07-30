@@ -235,7 +235,7 @@ header input[type='text']::placeholder {
     float: right;
     margin-top: 13px;
     font-weight: normal;
-    color: #343434;
+    color: rgba(0,0,0,0.3);
 }
 
 .card p {

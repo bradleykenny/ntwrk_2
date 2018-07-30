@@ -3,8 +3,8 @@
 
 {% block stream %}
     {% if user.is_authenticated %}
-	<a href="{% url 'home' %}">
-		<img src="{% static 'stream/img/dp/admin.jpg' %}" class="dp">
+	<a href="{% url 'home' %}" class="dp">
+		<img src="{% static 'stream/img/dp/admin.jpg' %}">
 	</a>
     <div class="card share_card">
         <h1>Want to share something?</h1><br>
@@ -32,7 +32,7 @@
 				<b>{% if post.posted_by.first_name|length > 0 %}{{ post.posted_by.first_name }} {{ post.posted_by.last_name }}{% endif %}</b> @{{ post.posted_by }}
 			</h2>
         </a>
-        <h3>{{ post.posted_at|date:'d M Y' }}</h2> <!-- d M Y, h:iA -->
+        <h3>{{ post.posted_at|date:'d M Y' }}</h3> <!-- d M Y, h:iA -->
         <p>{{ post.content }}</p>
         <a href="{% url 'home' %}" class="link">Comment</a>
         <a href="{% url 'home' %}" class="link">Share</a>
