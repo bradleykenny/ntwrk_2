@@ -23,6 +23,7 @@ urlpatterns = [
 
 	path('user/<username>/<post_id>/', stream.views.view_post, name='view_post'),
 
+	path('', stream.views.home, name='index'),
 	path('stream/', stream.views.home, name='home'),
 	path('stream/new_post/', stream.views.new_post, name='new_post'),
 	path('stream/<post_id>/delete_post/', stream.views.delete_post, name='delete_post'),
