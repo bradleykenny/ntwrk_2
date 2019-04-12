@@ -19,7 +19,7 @@
 				{% if user.is_authenticated %}
 				<a href="{% url 'home' %}">Home</a>
 				<a href="{% url 'profile' user.pk %}">@{{ user.username }}</a>
-				<a href="{% url 'update_profile' %}">…</a>
+				<a href="{% url 'update_profile' %}">Preferences</a>
 				<a href="{% url 'logout' %}">Log Out</a>
 				{% else %}
 				<a href="{% url 'home' %}">Home</a>

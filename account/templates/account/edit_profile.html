@@ -2,10 +2,12 @@
 {% load static %}
 
 {% block stream %}
+<div class="card">
     <form method="post" class="edit_profile" enctype="multipart/form-data">
     {% csrf_token %}
     {{ user_form.as_p }}
     {{ profile_form.as_p }}
     <button type="submit">Save changes</button>
     </form>
+</div>
 {% endblock %}

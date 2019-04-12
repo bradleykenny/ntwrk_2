@@ -3,7 +3,7 @@
 ==========================================================
 
 BASE.CSS
-VERSION: 0.1 BETA
+VERSION: 0.2 BETA
 
 ----------------------------------------------------------
 
@@ -30,7 +30,7 @@ a {
 	text-decoration: none;
 }
 
-/*
+/* ##############################
 LOGO:
 
 SOME OF THESE WILL CHANGE DEPENDING ON WHERE
@@ -40,7 +40,7 @@ CHANGE WITH AN ID CLASS.
 ALL LOGOS SHOULD HAVE A
 HOVER EFFECT AND CHANGE COLOR/DIM/BRIGHTEN IN SOME
 WAY.
-*/
+############################## */
 
 .logo {
 	font-family: 'Righteous', sans-serif;
@@ -60,7 +60,7 @@ THE COLOR OF THE LOGO
 	transition: 0.25s ease;
 }
 
-/*
+/* ##############################
 CARDS:
 
 WILL VARY IN SIZE AND CONTENT. SHOULDN'T NEED TO
@@ -69,7 +69,7 @@ AND MARGIN. WILL UPDATE WITH CONFIRMATION.
 
 BUTTON COLOR WILL CHANGE DEPENDING ON CONTENT IT
 IS LINKED TO. WILL CONNECT THIS TO A PYTHON SCRIPT.
-*/
+############################## */
 
 .card {
 	padding: 7.5px 15px 14px 15px;
@@ -140,8 +140,8 @@ sup:hover {
 	border-bottom: 2px solid rgba(0, 0, 0, 0.5);
 }
 
-/*
-NOTIFICATIONS:
+/* ##############################
+NOTIFICATIONS
 
 NO NEED TO DIFFER. THREE DIFFERENT TYPES OF
 NOTIFICATIONS DEPENDING ON TYPE: ERROR,
@@ -150,7 +150,7 @@ SUCCESSFUL AND INFORMATIONAL/NEUTRAL
 NEED TO EDIT SO THAT THEY ARE UNIFORM AND
 CONSISTENT ON ALL PAGES... THINKING THEY SHOULD BE
 TOP, MIDDLE OF THE PAGE ABOUT 15PX BELOW NAV BAR
-*/
+############################## */
 
 .notification {
 	width: 250px;
@@ -176,9 +176,13 @@ TOP, MIDDLE OF THE PAGE ABOUT 15PX BELOW NAV BAR
 	/* choose a font color */
 }
 
+/* ############################## 
+	EDIT PROFILE/PREFERENCES 
+############################## */
+
 .edit_profile {
-	border-radius: 5px;
-	border: solid 3px rgba(0,0,0,0.2);
+	/* border-radius: 5px; */
+	/* border: solid 3px rgba(0,0,0,0.2); */
 	padding: 15px 25px 20px;
 	background-color: white;
 }

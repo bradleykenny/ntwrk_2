@@ -18,8 +18,8 @@ def home(request):
 def profile(request, cur_user):
 	posts = Post.objects.all()
 	cur_user_obj = User.objects.get(pk=cur_user)
-	# cur_user_obj.profile.dp = 'dp/placeholder2.png'
-	# cur_user_obj.save()
+	cur_user_obj.profile.dp = 'dp/placeholder2.png'
+	cur_user_obj.save()
 	return render(request, 'account/profile.html', { 'posts': posts, 'cur_user': cur_user_obj })
 
 
